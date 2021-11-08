@@ -1,0 +1,3 @@
+<template>
+    Request receive
+</template>
