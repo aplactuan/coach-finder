@@ -30,7 +30,8 @@ export default {
         const response = await fetch(`https://find-coach-fa3be-default-rtdb.asia-southeast1.firebasedatabase.app/coaches.json`);
         const responseData = await response.json();
         if (!response.ok) {
-            //....
+            const error = new Error(responseData.message || 'Unable to fetch data!');
+            throw error;
         }
 
         const coaches = [];
